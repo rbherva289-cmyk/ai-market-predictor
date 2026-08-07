@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 
 function App() {
-  const [prediction, setPrediction] = useState(null);
+  const [data, setData] = useState(null);
 
-  const getPrediction = async () => {
-    setPrediction({
-      symbol: "NIFTY",
+  const predictMarket = () => {
+    setData({
       signal: "BUY",
       confidence: "87%",
+      sentiment: "Positive",
     });
   };
 
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
+    <div style={{ padding: "20px" }}>
       <h1>AI Market Predictor</h1>
 
-      <button onClick={getPrediction}>
+      <button onClick={predictMarket}>
         Predict Market
       </button>
 
-      {prediction && (
+      {data && (
         <div>
-          <h2>{prediction.symbol}</h2>
-          <p>Signal: {prediction.signal}</p>
-          <p>Confidence: {prediction.confidence}</p>
+          <h2>Signal: {data.signal}</h2>
+          <p>Confidence: {data.confidence}</p>
+          <p>Sentiment: {data.sentiment}</p>
         </div>
       )}
     </div>
