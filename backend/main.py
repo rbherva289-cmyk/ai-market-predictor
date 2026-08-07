@@ -20,3 +20,5 @@ def prediction():
         "sentiment": sentiment,
         "prediction": result
     }
+from logger import log_message
+from security import check_api_key
