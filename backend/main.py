@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from indicators import calculate_rsi
+from market_data import get_market_data
 from sentiment import analyze_sentiment
 
 app = FastAPI()
@@ -8,13 +8,13 @@ app = FastAPI()
 def home():
     return {"message": "AI Market Predictor"}
 
-@app.get("/market")
-def market():
+@app.get("/predict")
+def predict():
+    market = get_market_data()
     sentiment = analyze_sentiment()
 
     return {
-        "signal": "BUY",
-        "rsi": 65,
-        "macd": "Bullish",
-        "sentiment": sentiment
+        "market": market,
+        "sentiment": sentiment,
+        "signal": "BUY"
     }
