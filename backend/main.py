@@ -1,4 +1,7 @@
-from fastapi import FastAPI
+log_message("Prediction requested")
+
+if not check_api_key():
+    return {"error": "Invalid API key"}from fastapi import FastAPI
 from market_data import get_market_data
 from sentiment import analyze_sentiment
 
