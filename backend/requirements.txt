@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-numpy
-pandas
-tensorflow
-scikit-learn
-textblob
-transformers
-torch
