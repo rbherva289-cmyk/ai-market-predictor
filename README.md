@@ -1,18 +1,22 @@
 # AI Market Predictor
 
-AI Market Predictor is an application that analyzes market trends using AI, technical indicators, and social media sentiment.
+यह एक AI आधारित प्रोजेक्ट है, जो इन चीज़ों का इस्तेमाल करता है:
 
-## Features
+- सोशल मीडिया डेटा
+- मार्केट डेटा
+- RSI और MACD इंडिकेटर
+- AI आधारित BUY और SELL सिग्नल
 
-- Real-time market analysis
-- Technical indicators
-- Social media sentiment analysis
-- AI-based prediction
-- Interactive dashboard
+## तकनीकें
 
-## Technology Stack
-
-- React
 - Python
 - FastAPI
-- SQLite
+- React
+- GitHub
+
+## प्रोजेक्ट की संरचना
+
+backend/
+frontend/
+requirements.txt
+package.json
